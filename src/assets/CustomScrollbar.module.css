@@ -1,0 +1,203 @@
+.navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px rgba(150, 0, 230, 0.7);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navLink {
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  color: #cb00e6;
+}
+
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #d700e6;
+}
+
+.switchContainer {
+  margin-left: 20px;
+}
+
+.scrollContainer {
+  position: fixed;
+  right: 10px;
+  top: 0;
+  width: 10px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 999999;
+}
+
+.scrollBar {
+  width: 100%;
+  background-color: #6400e6;
+  transition: none; /* Instant update */
+  z-index: 1000;
+}
+
+.bug {
+  position: absolute;
+  /* We'll use 'top' instead of bottom so it starts at the top */
+  right: -10px; /* Adjust as needed for alignment */
+  font-size: 30px; /* Larger bug */
+  color: black; /* Black color */
+  transform: rotate(90deg); /* Facing downward */
+  cursor: pointer;
+  transition: top 0.1s ease-in-out, transform 0.1s ease-in-out; /* Match duration */
+}
+
+.bug {
+  position: absolute;
+  right: -15px;
+  font-size: 30px;
+  color: black;
+  transform: rotate(180deg); /* Keep bug rotated */
+  cursor: pointer;
+  transition: bottom 0.3s ease-in-out, transform 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.tooltip {
+  position: absolute;
+  left: 120%; /* Move tooltip to the right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%) rotate(-180deg); /* Counter-rotate */
+  
+  background: rgba(50, 50, 50, 0.9);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bug:hover .tooltip {
+  opacity: 1;
+}
+
+
+/* Hamburger Styles */
+.hamburger {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px; /* Width of hamburger */
+  height: 30px; /* Height of hamburger */
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 3px; /* Thickness of bars */
+  background-color: white; /* Color of bars */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0; /* Hide middle bar */
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg); /* Rotate top bar */
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg); /* Rotate bottom bar */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .navContainer {
+    padding: 10px 15px;
+  }
+  
+  .navLinks {
+    position: fixed;
+    left: -100%; /* Hide off-screen */
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+  }
+
+  .navLinks.active {
+    left: 0; /* Show when active */
+  }
+  
+  .navLinks {
+    gap: 15px;
+  }
+  
+  .navLink {
+    font-size: 0.9rem;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger on small screens */
+    margin-right: 15px;
+  }
+}
+  
+@media (max-width: 521px) {
+    .navLinks {
+      gap: 10px
+    }
+    .navLink {
+      font-size: 0.7rem;
+    }
+    .logo {
+      font-size: 0.7rem;
+    }
+}
