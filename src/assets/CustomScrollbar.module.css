@@ -76,7 +76,7 @@
   /* We'll use 'top' instead of bottom so it starts at the top */
   right: -10px; /* Adjust as needed for alignment */
   font-size: 30px; /* Larger bug */
-  color: black; /* Black color */
+  /* color: black; */
   transform: rotate(90deg); /* Facing downward */
   cursor: pointer;
   transition: top 0.1s ease-in-out, transform 0.1s ease-in-out; /* Match duration */
@@ -84,9 +84,9 @@
 
 .bug {
   position: absolute;
-  right: -15px;
+  right:  -6px;
   font-size: 30px;
-  color: black;
+  /* color: black; */
   transform: rotate(180deg); /* Keep bug rotated */
   cursor: pointer;
   transition: bottom 0.3s ease-in-out, transform 0.2s ease-in-out;

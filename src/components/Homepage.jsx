@@ -242,8 +242,6 @@ const Homepage = () => {
           </h2>
           <p>
           Design is where ideas take visual form. Our designers are the storytellers of the club, crafting interfaces, posters, brand identities, and experiences that resonate. From pixel-perfect UI/UX for apps to bold event posters and social media creatives — they bring clarity and emotion to every project.
-
-
           </p>
           <p>
           Collaboration is at the heart of what they do. Whether it’s teaming up with developers for seamless user flows or working with the PR team for eye-catching promotions, designers make sure every piece not only looks great but feels right. They blend creativity with purpose to make the club’s vision truly visible.
@@ -259,32 +257,34 @@ const Homepage = () => {
         <h2>What Sets Our Designers Apart</h2>
         <div className="services-container">
           <div className="service-card">
-            <h3>Design Without Limits
-            </h3>
-            <p>
-            We craft for screens of all shapes and sizes — websites, apps, posters, or reels — with a vision-first approach.
+            <h3>Parametric CAD Modeling
 
+            </h3>
+            <p>
+            Advanced CAD modeling of mechanical and automotive components using SolidWorks with parametric precision.
             </p>
           </div>
           <div className="service-card">
-            <h3>Style with a Statement
+            <h3>ANSYS Design Validation
+
             </h3>
             <p>
-            Think bold fonts, layered textures, high contrast, and visuals that demand attention.
+            Simulation-driven design validation using ANSYS for stress, thermal, and motion analysis.
             </p>
           </div>
           <div className="service-card">
-            <h3>Themes That Tell Stories
+            <h3>Simulation-Based Optimization
             </h3>
             <p>
-            Whether it’s glitch-core, vaporwave, or torn-paper zines — our design isn’t just pretty, it speaks.
+            Iterative design optimization, integrating simulation feedback to improve performance and efficiency.
             </p>
           </div>
           <div className="service-card">
-            <h3>Built Around People
+            <h3>Virtual Prototyping Integration
             </h3>
             <p>
-            Every design is tested for real users. Because great design doesn’t just look good — it feels right            </p>
+            Bridging design and engineering, enabling virtual testing and rapid prototyping before physical production.
+            </p>
           </div>
         </div>
       </section>

@@ -112,10 +112,10 @@ const CustomScrollbar = () => {
             onMouseEnter={() => setShowTooltip(true)}
             onMouseLeave={() => setShowTooltip(false)}
           >
-            🎨
+            ⚙
             {showTooltip && (
               <div className={styles.tooltip}>
-                Light Mode is being <br/>painted right now!
+                Simulation failed. Reason: <br/>Excessive brightness detected.
               </div>
             )}
           </div>
