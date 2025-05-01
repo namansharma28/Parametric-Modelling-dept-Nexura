@@ -2,10 +2,44 @@ import { useState, useEffect, useRef } from "react";
 import "../assets/Homepage.css";
 import CustomScrollbar from "./CustomScrollbar";
 import Contact from "./Contact";
+import project1 from "/projects/project1.png"
+import project2 from "/projects/project2.png"
+import project3 from "/projects/project3.png"
+import project4 from "/projects/project4.jpg"
+import ProjectCard from "./ProjectCard";
+
 // import Dropdown from "./Team";
 
 //Project's data! 
 const projectsData = [
+  {
+    cardTitle: "Truss member",
+    cardDescription: "Total deformation of truss member",
+    title: "Total deformation of truss member",
+    videoSrc: project1,
+    thumbnail: project1,
+  },
+  {
+    cardTitle: "Audi Bumper",
+    cardDescription: "Stress analysis of Audi car bumper",
+    title: "Stress analysis of Audi car bumper",
+    videoSrc: project2,
+    thumbnail: project2,
+  },
+  {
+    cardTitle: "Aerodynamic Test",
+    cardDescription: "",
+    title: "Aerodynamic Test",
+    videoSrc: project3,
+    thumbnail: project3,
+  },
+  {
+    cardTitle: "4 cylinder Crank Shaft",
+    cardDescription: "",
+    title: "4 cylinder Crank Shaft",
+    videoSrc: project4,
+    thumbnail: project4,
+  },
 //  in obj format
   //Add projects here!!
 ];
@@ -290,7 +324,7 @@ const Homepage = () => {
       </section>
 
       {/* Project Section */}
-      {/* <section id="projects" className="services">
+      <section id="projects" className="services">
         <h2>Our Projects</h2>
         <div className="services-container">
           {projectsData.map((project, index) => (
@@ -306,7 +340,7 @@ const Homepage = () => {
             />
           ))}
         </div>
-      </section> */}
+      </section>
 
       {/* Team section to be added later */}
       {/* <section id="Team" className="services">

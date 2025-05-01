@@ -80,6 +80,12 @@ const CustomScrollbar = () => {
         >
           About
         </div>
+        <div 
+          className={`${styles.navLink} ${activeSection === "projects" ? styles.active : ""}`}
+          onClick={() => scrollToSection("projects")}
+        >
+          Projects
+        </div>
 
         {/* team for later.. */}
         {/* <div 
